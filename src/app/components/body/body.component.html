@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col">
+        <div class="card mb-3">
+            <div class="card-body text-white bg-secondary">
+                <h5 class="card-title">*NgIf</h5>
+                <p class="card-text">Ejemplo del uso de la directiva
+                    *ngIf</p>
+            </div>
+            <div *ngIf="citaVisible" class="card-body">
+                <h5 class="card-title">{{ cita.autor }}</h5>
+                <p class="card-text">{{ cita.cita }}</p>
+            </div>
+        </div>
+        <button (click)="ocultaMuestraCita()" class="btn btn-outlineprimary">{{ textoDelBoton }}</button>
+    </div>
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">*NgFor</h5>
+                <ul class="list-group" *ngFor="let autor of autores; index as i">
+                    <li class="list-group-item">{{ i + 1 }} - {{ autor }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
